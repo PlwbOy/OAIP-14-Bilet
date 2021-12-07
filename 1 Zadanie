@@ -1,0 +1,28 @@
+#include "stdafx.h"
+#include <string>
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	setlocale(LC_CTYPE, "Russian");
+	string str = "aaaaa,aaa,aa+aaaaaaaaaa+aaaaa,,a..aaa+a+";
+	int n;
+	int count = 0;
+	int count1 = 0;
+
+	n = str.length();
+
+	for ( int i = 0; i < n; i++)
+{
+	if(str[i] == '+')
+		count++;
+	if(str[i] == '-')
+		count1++;
+}
+
+	cout <<" Количество знаков + " << count << endl;
+	cout <<" Количество знаков - " << count1 << endl;
+	system("Pause");
+	return 0;
+} 
