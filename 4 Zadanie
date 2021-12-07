@@ -1,0 +1,31 @@
+using System;
+
+public class Program
+{
+    public static void Main()
+    {
+        Random rnd = new Random();
+        int[] arr = new int[15];
+        int average = 0, cnt = 0, sum = 0;
+
+        Console.WriteLine("Заполненный массив:");
+        for (int i = 0; i < 10; i++)
+        {
+            arr[i] = rnd.Next(-10, 30);
+            Console.Write(arr[i] + " ");
+
+            if (arr[i] > 0)
+            {
+                average += arr[i];
+                cnt++;
+            }
+        }
+
+        sum = average;
+        average /= cnt;
+        Console.WriteLine("\nКоличество положительных = {0}", cnt);
+        Console.WriteLine("Сумма всех его положительных элементов = {0}", sum);
+        Console.WriteLine("Среднее арифметическое положительных = {0}", average);
+
+    }
+}
